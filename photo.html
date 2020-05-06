@@ -1,0 +1,73 @@
+
+	
+
+
+<html>
+<body>
+
+<form action="photo.php" method="post" enctype="multipart/form-data">
+
+
+<label><b>Photo:</b> <span class="photo_des">Maximum size is 1MB and type is png/jpeg</span></label>
+			<input type="file" name="pic" accept="image/png,image/jpeg" data-max-size="1" required>
+			
+			<input type="submit" class="button" value="Submit">
+			
+</form>
+
+
+</body>
+</html>
+
+
+	
+
+
+<?php
+$servername = "localhost";
+$username = "namitha";
+$password = "namitha";
+$dbname = "searchurmatch";
+
+$pic=addslashes(file_get_contents($_FILES["pic"]["tmp_name"]));
+
+
+// Create connection
+$conn = mysql_connect($servername, $username, $password);
+$dbselect=mysql_select_db($dbname,$conn);
+// Check connection
+
+if($conn)
+{
+echo "  CONNECTION ESTABLISHED \r\n";
+
+  if($dbselect)
+	{
+  echo "Selected";
+  $sql="insert into profile (photo) values('$pic')";
+ 
+  if(mysql_query($sql,$conn))
+  { echo "created";
+  
+  $query="select * from profile order by id desc";
+  $result=mysql_query($query,$conn);
+	while($row=mysql_fetch_array($result))
+	{
+	echo '<imgsrc="data:image/jpeg;base64,'.base64_encode($row['name']).'"/>';
+	}
+	//header("Location:home.html");
+	
+	
+  }
+  else
+	 echo "not created";
+  
+}else
+   echo "not selected";
+
+}
+ else 
+
+echo "not connected";
+
+?>

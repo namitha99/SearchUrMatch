@@ -1,0 +1,29 @@
+delimiter ;;
+create procedure avgr(pid in int(8))
+
+begin
+
+declare q1 int(1);
+declare q2 int(1);
+declare q3 int(1);
+declare sm int(2);
+declare av int(2);
+
+select question1,question2,question3
+into q1,q2,q3
+from feedback
+where profile_id=pid
+and rating is null;
+
+
+sm=q1+q2+q3;
+av=sm/3;
+
+update feedback
+set rating=av
+where profile_id=pid
+and rating is null;
+
+
+end
+;;

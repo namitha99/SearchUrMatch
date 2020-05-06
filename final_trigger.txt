@@ -1,0 +1,28 @@
+create trigger match_trigger
+after update on profile
+begin
+declare id1 int(8);
+declare id2 int(8);
+
+
+	 select p1.profile_id,p2.profile_id
+	into id1,id2
+	from profile p1,profile p2
+	where p1.match_id=p2.profile_id
+	and p2.match_id=p1.profile_id
+	and p1.profile_id not in(select profile_id1
+                             from success_story
+                             union
+                             select profile_id2
+                             from success_story)
+
+	limit 1;
+
+	if(id1!='') then
+	
+	
+		insert into success_story (profile_id1,profile_id2)values
+		(id1,id2);
+	end if;
+	
+end

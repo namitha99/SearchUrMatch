@@ -1,0 +1,8 @@
+trigger url:
+
+http://www.mysqltutorial.org/create-the-first-trigger-in-mysql.aspx
+
+==============
+rating
+
+https://codepen.io/tammykimkim/pen/yegZRw

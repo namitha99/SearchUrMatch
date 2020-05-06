@@ -1,0 +1,31 @@
+create or replace procedure avgrating is
+cursor c_rating is
+select question1 as a,
+	   question2 as b,
+	   question3 as c,
+from feedback
+where rating is null
+for update;
+
+c_a int;
+c_b int;
+c_c int;
+c_sm int;
+c_av int;
+begin
+
+	open c_rating
+	loop
+		fetch c_rating into c_a,c_,c_c;
+		exit when c_rating% NOTFOUND;
+
+		c_sm:=c_a+c_b+c_c;
+		c_av:=c_sm/3;
+
+
+		update feedback
+		set rating=c_av
+		where current of c_rating;
+	end loop;
+	close c_rating;
+end;

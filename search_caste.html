@@ -1,0 +1,189 @@
+
+<html>
+<head>
+<title>CASTE PAGE</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style_sidemenu.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+#home1
+{
+//background: RGBA(7,40,195,0.1);
+//background: RGBA(195,100,90,0.5);
+	width:500px;
+position:relative;
+left:400px;
+margin-top:10px;
+}
+#button {
+						  border: none;
+						  outline: 0;
+						  display: inline-block;
+						  padding: 8px;
+						  color: black;
+						  //background-color: #000;
+						  text-align: center;
+						  cursor: pointer;
+						  width: 100%;
+						  font-weight:bold;
+						   border-radius: 90px;
+						  font-size: 18px;
+						}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content: none;
+}
+.menu {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+	background-color:#cc6476;
+}
+.m-item {
+    color: white;
+    //text-decoration: none;
+	font-size:18px;
+	font-weight:bold;
+   // text-transform: uppercase;
+    border: 2px solid #000;
+    background-color:#000;
+       padding: 58px;
+    position: absolute;
+    transform: translate(0) rotate(0deg);
+}
+.m-item span {
+    position: absolute;
+	margin-top:30px;
+	    transform: rotate(-45deg) translate(0, -55px);
+}
+.m-item:hover {
+    background-color: #AA5;
+}
+#m1 {
+    transform: translate(400px, 0px) rotate(45deg);
+	//background-color: #ffb3b3;
+}
+#m2 {
+    transform: translate(310px, 90px) rotate(45deg);
+		//background-color:#ff8080;
+}
+
+#m3 {
+    transform: translate(490px, 90px) rotate(45deg);
+}						
+</style>
+
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="home.html">Home</a>
+	<a href="final_profile_page.php">Profile</a>
+  	<a href="service.php">Services</a>
+  	<a href="loan.html">Marriage loan</a>
+	<a href="success.php">Success story</a>
+  	<a href="feedback.html">Feedback</a>
+	<a href="search.html">Search</a>
+	<a href="logout.php" onclick="logout()">Logout</a>
+	
+	</div>
+
+<div id="main">	
+  <div id="title">
+		
+		<table cellspacing="2" cellpadding="4">
+
+		<tr>
+			<td>
+			<img src="http://localhost/images/logo.jpg " width="250" height="75"></img>
+			</td>
+
+			<td >
+			<font size="6" color="white" face="Edwardian Script ITC"><h1><b>&nbspSearchUrMatch &nbsp   </b><i>Matrimony</i></h1>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<div id="home1" >
+		
+	<form method="post">
+	<center><table width=50%>
+		<tr>
+			<td>
+			<input type="submit" name="gm" value="gm" formaction="search.php" id="button">
+			</td>
+		</tr>
+		<tr>
+			<td>
+		
+			<input type="submit" name="obc" value="obc" formaction="search.php" id="button">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<input type="submit" name="sc/st" value="sc/st" formaction="search.php" id="button">
+			</td>
+		</tr>
+		
+			
+		
+	</table></center>
+	</form>
+	</div>
+	
+		
+			
+	
+
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+function logout() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('Logging out!!! See you soon');
+	}
+</script>
+	
+	
+
+
+
+
+</body>
+
+</html>
+

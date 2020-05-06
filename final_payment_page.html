@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>PAYMENT PAGE</title>
+<link rel="stylesheet" type="text/css" href="style_payment.css"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+	<div id="title">
+		
+		<table cellspacing="2" cellpadding="4">
+
+		<tr>
+			<td>
+			<img src="http://localhost/images/logo.jpg " width="250" height="75"></img>
+			</td>
+
+			<td >
+			<font size="6" color="white" face="Edwardian Script ITC"><h1><b>&nbspSearchUrMatch &nbsp   </b><i>Matrimony</i></h1>
+			</td>
+		</tr>
+		</table>
+	</div>
+	
+
+
+     
+	<div id="payment">
+		<font size="14" color="black" face="Edwardian Script ITC"><center><label><b>Payment gateway</b></label></center></font>
+		<br>
+		
+		<label>Amount:1000 Rupees</label>
+
+
+
+		<label>Select payment method</label>
+		<form action="payment.php" method="post" onsubmit="enableBtn()">
+		<select name="mode">
+		<option value="debit" selected="selected" required>debit</option>
+		<option value="credit" selected="selected" required>credit</option>
+		<option value="net banking" selected="selected" required>net banking</option>
+		</select>
+
+		<br>
+		
+		
+		<label>Choose a bank:</label>
+		<input type="radio" name="bank" value="bank1" required>Bank1
+		<input type="radio" name="bank" value="bank2" required>Bank2
+
+		<br>
+		<br>
+
+
+		<div id="pay" class="popup" >
+			<input type="submit"  id="paysubmit" class="paybutton" value="submit">
+  			<span class="popuptext" id="myPopup">Payment Successful!!!</span>
+		</div>
+		
+
+		</form>
+		
+	<script>
+	// this is for pop up payment successful
+	// When the user clicks on <div>, open the popup
+	/*function myFunction()
+	 {
+  		var popup = document.getElementById("myPopup");
+  		popup.classList.toggle("show");
+	}*/
+
+	<!--<button id="nextbtn" onclick="nextpage()" class="paybutton" disabled>Next</button>-->
+	</script>
+
+
+
+	
+	<script>
+
+	//this is for enabling next button
+	function enableBtn() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('payment successful!!');
+	}
+
+
+
+	function nextpage()
+	{
+		location.href = "display.html";
+	
+	}
+	</script>
+
+
+
+
+	</div>
+	
+
+</body>
+</html>

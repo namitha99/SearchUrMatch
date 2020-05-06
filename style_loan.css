@@ -1,0 +1,67 @@
+#loan
+{
+//background: RGBA(7,40,195,0.1);
+background: RGBA(195,100,90,0.5);
+	width:500px;
+position:relative;
+left:450px;
+margin-top:10px;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+.paybutton
+{
+	background:#ffffff;;
+	padding:14px;
+	font-family:"Ubuntu";
+	font-size:19px;
+	cursor:pointer;
+	
+}
+
+
+.button  	/*button for submit*/
+{
+    background-color: #0088cc;
+    border: 1px solid #0088cc;
+    border-radius: 1px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 0.9375em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-right: 0.3125em;
+    margin-bottom: 0.3125em;
+    padding: 0.5em 0.6875em;
+    width: auto;
+
+}

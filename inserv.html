@@ -1,0 +1,220 @@
+
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style_front.css" />
+<link rel="stylesheet" type="text/css" href="style_sidemenu.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+.form{
+	
+	position:relative;
+	z-index:1;
+	//background: RGBA(7,40,195,0.8);
+	background-color:#cc6476;
+	max-width:360px;
+	margin:0 auto 100px;
+	padding:45px;
+	text-align:center;
+	
+}
+#right
+{	float:right;
+	border-radius:50px;
+	//border:solid;
+	//background-color:#cc6476;
+	//border:3px solid #f1f1f1;
+	width:450px;
+	margin:0;
+	margin-top:150px;
+	margin-right: 3em;
+	background-color: #f1f1c1;
+	
+}
+
+#left
+{	float:left;
+	border-radius:50px;
+	//border:solid;
+	//background-color:#cc6476;
+	//border:3px solid #f1f1f1;
+	width:450px;
+	margin:0;
+	margin-top:150px;
+	margin-left:250px;
+	background-color: #f1f1c1;
+	
+}
+#rightbottom
+{	float:right;
+	//border-radius:50px;
+	//border:solid;
+	//background-color:#cc6476;
+	//border:3px solid #f1f1f1;
+	width:250px;
+	
+	margin:0;
+	margin-top:70px;
+	margin-right:170px;
+	
+	
+}
+button {
+	 border: none;
+	 outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color:white;
+	background-color:#cc6476;
+	//background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	height:100px;
+	 font-size: 18px;
+	 font-weight:bold;
+}
+
+.button{
+font-size: 14px;
+	 font-weight:bold;
+	 background-color:#cc6476;
+	 color:white;
+}
+a {
+						  text-decoration: none;
+						  font-size: 22px;
+						  color: black;
+						}	
+::placeholder {
+  color: black;
+  //font-weight:bold;
+  font-size:18px;
+ 
+
+}
+
+
+</style>
+<body>
+<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="home.html">Home</a>
+	<a href="final_profile_page.php">Profile</a>
+  	<a href="service.php">Services</a>
+  	<a href="loan.html">Marriage loan</a>
+	<a href="success.php">Success story</a>
+  	<a href="feedback.html">Feedback</a>
+	<a href="search.html">Search</a>
+	<a href="logout.php" onclick="logout()">Logout</a>
+	
+	</div>
+
+<div id="main">	
+  <div id="title">
+		
+		<table cellspacing="2" cellpadding="4">
+
+		<tr>
+			<td>
+			<img src="http://localhost/images/logo.jpg " width="250" height="75"></img>
+			</td>
+
+			<td >
+			<font size="6" color="white" face="Edwardian Script ITC"><h1><b>&nbspSearchUrMatch &nbsp   </b><i>Matrimony</i></h1>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+</div>
+	
+	
+	
+	
+	
+	<div id="left">
+	<div class="login-page">
+		
+		<form method="post" action="insert1.php" enctype="multipart/form-data" onsubmit="insert()">
+			
+			<input type="text" placeholder="service name" pattern="[A-Za-z ]*" maxlength="30" name="service_name" required>
+			<input type="text" placeholder="provider name" pattern="[A-Za-z ]*" maxlength="30" name="provider_name" required>
+	
+			<input type="number" placeholder="price" name="price" min="0" pattern="[+]?[0-9]" required>
+			<input type="tel" placeholder="phone number" name="contactno" pattern="[0-9]{10}" required>
+			<input type="text" placeholder="address" name="address" pattern="[A-Za-z]*" maxlength="50" required>
+			
+			<label><b>Photo:</b> <span class="photo_des">Maximum size is 1MB and type is png/jpeg</span></label>
+			<input type="file" name="pic" accept="image/png,image/jpeg" data-max-size="1">
+
+			
+			
+			
+			<input type="submit" class="button" value="ADD SERVICE" name="submit">
+			
+		</form>
+		
+	</div>
+	</div>
+	
+	<div id="right">
+	<div class="login-page">
+		
+		<form method="post" action="deleteservice.php" enctype="multipart/form-data" onsubmit="delete1()">
+			
+			<input type="text" placeholder="service name" pattern="[A-Za-z ]*" maxlength="30" name="service_name" required>
+			<input type="text" placeholder="provider name" pattern="[A-Za-z ]*" maxlength="30" name="provider_name" required>
+	
+					
+			
+			
+			<input type="submit" class="button" value="DELETE SERVICE" name="submit">
+			
+		</form>
+		
+	</div>
+	</div>
+	<div id="rightbottom">
+	<p><button><a href="viewservice.php"><font color="white">view Service Taken</font></a>			</button></p>
+	</div>
+	<script>
+	
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+function logout() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('Logging out!!! See you soon');
+	}
+	function insert() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('Service inserted');
+	}
+function delete1() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('Service deleted');
+	}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>	
+</body>
+</html>

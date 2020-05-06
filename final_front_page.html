@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>FRONT PAGE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="style_front.css"/>
+
+ <link rel="stylesheet" type="text/css" href="circuarnav.css" />
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+	<link rel="stylesheet" href="footer.css">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+ 
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+<style>
+.mySlides {display:none;}
+
+#story{
+float:left;
+position:absolute;
+//margin-left:30px;
+margin-top:485px;
+//background-color:#cc6476;
+width:100%;
+}
+
+::placeholder {
+  color: black;
+  //font-weight:bold;
+  font-size:18px;
+ 
+
+}
+ .form{
+	
+	position:relative;
+	z-index:1;
+	//background: RGBA(7,40,195,0.8);
+	background-color:#cc6476;
+	max-width:360px;
+	margin:0 auto 100px;
+	padding:45px;
+	text-align:center;
+	
+}
+.form input{
+		font-family:"Roboto",sans-serif;
+		
+		outline: 1;
+		background: #f2f2f2;
+		width:100%;
+		border:0;
+		margin:0 0 15px;
+		padding:15px;
+		box-sizing:border-box;
+		font-size:14px;
+		
+ }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+	<div id="title">
+		
+		<table cellspacing="2" cellpadding="4">
+
+		<tr>
+			<td>
+			<img src="http://localhost/images/logo.jpg " width="250" height="75"></img>
+			</td>
+
+			<td >
+			<font size="6" color="white" face="Edwardian Script ITC"><h1><b>&nbspSearchUrMatch &nbsp   </b><i>Matrimony</i></h1>
+			</td>
+		</tr>
+		</table>
+	</div>
+	
+
+	<div id="right_box">
+	
+		<div class="login-page">
+
+          		<div class="form">
+
+               		<form class="register-form"  method="post">
+                   		<input type="text" name="t1" placeholder="user name" title="username should consists of characters with max length 25" maxlength="25" pattern="[A-Za-z]*" required>
+				<input type="password" name="t2" id="passwordwithtitle" maxlength="25" placeholder="password" pattern="^(?=.*\d)(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character,and 1 number." required>
+				<input type="email" id="email" name="t3" placeholder="email id" maxlength="25" title="it can contain no,characters" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" required>
+				
+			<input type="number" name="year" min="1980" max="2100" placeholder="Year of birth" maxlength="4" pattern="[+]?[0-9]" required>
+			Gender:
+			<input type="radio" name="gender" value="male"required>Male
+			<input type="radio" name="gender" value="female">Female
+				<input type="submit" value="create" formaction="create.php">
+				<b>
+			<P class="message">Already Registered?<a href="#">Login</a></p>
+				</b>
+                	</form>
+
+
+
+			<form class="login-form"  method="post">
+			<b>
+				<input type="text" name="t4" placeholder="user name" required>
+				<input type="password" name="t5"  placeholder="password" required>
+				<input type="submit" name="login" value="Login" formaction="login.php">
+				
+				<p class="message">Not registered? <a href="#">Register</a></p>
+				</b>
+			</form>
+			<br>
+			<form>
+			<input type="submit" name="admin login"  value="admin login" formaction="admin.php">
+			</form>
+          		</div>
+		</div>
+		
+		
+		
+		<script src='ysrjs.js' ></script>
+
+		<script>
+			$('.message a').click(function(){
+				$('form').animate({height:"toggle",opacity:"toggle"},"fast");
+			});
+
+
+		</script>
+		
+		
+
+	</div>
+
+
+
+
+	<div id="left_box">
+	<div class="w3-content w3-section" style="max-width:500px">
+ 	<img class="mySlides" src="http://localhost/images/h7.jpg" width="500" height="300">
+  	<img class="mySlides" src="http://localhost/images/loan.jpg" width="500" height="300">
+  	
+	<img class="mySlides" src="http://localhost/images/1.jpg" width="500" height="300">
+	</div>
+	</div>
+
+<div id="story">
+<div>
+<font size="7" color="black" face="Edwardian Script ITC"><b>Popular Success Story...</b></font>
+</div>
+
+
+<img src="http://localhost/images/succ1.jpg" width="700" height="350">
+
+
+
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3500); // Change image every 2 seconds
+}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>	
+	
+  <script src="try16.js"></script>
+  
+  <footer class="footer-distributed">
+ 
+			<div class="footer-left">
+         
+				<h3>About&nbsp<span>SearchUrMatch</span></h3>
+ 
+				<p class="footer-links">
+					
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+ 
+				<p class="footer-company-name">C 2019 SearchUrMatch Pvt. Ltd.</p>
+			</div>
+ 
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Vidyapeeta,Bangalore-560085</span>
+						Karnataka,India</p>
+				</div>
+ 
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 9030999100</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@eduonix.com">searchurmatch@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the website</span>
+					SearchUrMatch is a web portal that enables a user to find a partner by choice.
+					This site allows users to find their life partner based on their requirements</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+  
+
+</body>
+
+
+
+</html>

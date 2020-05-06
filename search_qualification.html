@@ -1,0 +1,167 @@
+
+<html>
+<head>
+<title>QUALIFICATION PAGE</title>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style_sidemenu.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+#home1
+{
+//background: RGBA(7,40,195,0.1);
+//background: RGBA(195,100,90,0.5);
+	width:500px;
+position:relative;
+left:400px;
+margin-top:10px;
+//z-index:-1;
+}
+#button {
+						  border: none;
+						  outline: 0;
+						  display: inline-block;
+						  padding: 8px;
+						  color: black;
+						  //background-color: #000;
+						  text-align: center;
+						  cursor: pointer;
+						  width: 90%;
+						  //height:59px;
+						  font-weight:bold;
+						   border-radius: 90px;
+						  font-size: 18px;
+						}
+	
+
+
+</style>
+
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="home.html">Home</a>
+	<a href="final_profile_page.php">Profile</a>
+  	<a href="service.php">Services</a>
+  	<a href="loan.html">Marriage loan</a>
+	<a href="success.php">Success story</a>
+  	<a href="feedback.html">Feedback</a>
+	<a href="search.html">Search</a>
+	<a href="logout.php" onclick="logout()">Logout</a>
+	
+	</div>
+
+<div id="main">	
+  <div id="title">
+		
+		<table cellspacing="2" cellpadding="4">
+
+		<tr>
+			<td>
+			<img src="http://localhost/images/logo.jpg " width="250" height="75"></img>
+			</td>
+
+			<td >
+			<font size="6" color="white" face="Edwardian Script ITC"><h1><b>&nbspSearchUrMatch &nbsp   </b><i>Matrimony</i></h1>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	<div id="home1" >
+		
+	<form method="post">
+	<table width=90% >
+		<tr>
+			<td>
+			<input type="submit" name="MTech" value="MTech" formaction="search.php" id="button">
+			</td>
+			
+		
+		<td>
+		
+			<input type="submit" name="BCom" value="BCom" formaction="search.php" id="button">
+			</td>
+			</tr>
+		<tr>
+			<td>
+			<input type="submit" name="MSc" value="MSc" formaction="search.php" id="button">
+			</td>
+			<td>
+			<input type="submit" name="Bsc" value="Bsc" formaction="search.php" id="button">
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+		
+			<input type="submit" name="LLB" value="LLB" formaction="search.php" id="button">
+			</td>
+			<td>
+			<input type="submit" name="MBBS" value="MBBS" formaction="search.php" id="button">
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+		
+			<input type="submit" name="BA" value="BA" formaction="search.php" id="button">
+			</td>
+			<td>
+			<input type="submit" name="BE" value="BE" formaction="search.php" id="button">
+			</td>
+		</tr>
+				
+	</table>
+	</form>
+	</div>
+		
+			
+	
+
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+function logout() 
+	{
+ 	 //if(confirm('Do you want to continue with payment?'));
+	alert('Logging out!!! See you soon');
+	}
+</script>
+	
+	
+
+
+
+
+</body>
+
+</html>
+

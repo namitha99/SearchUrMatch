@@ -1,0 +1,71 @@
+#profile_page    /*make yourself known*/
+{
+	border-radius:10px;
+	background-color:#ffe6e6;
+	//border:3px solid #f1f1f1;
+	width:850px;
+	margin:0 auto;
+	font-size:150%;
+	
+}
+
+#profile_details	/*profile div consists of personal,family,other,button-link*/
+{	float:right;
+	border-radius:10px;
+	background-color:#ffe6e6;
+	//background: RGBA(7,40,195,0.1);
+	border:3px solid #f1f1f1;
+	width:650px;
+	margin:0 auto;
+	margin-right: 18em;
+	
+	//color:#ffcabb;
+	
+	
+}
+
+#details
+{
+	border-radius:10px;
+	background-color:#cc6476;
+	border:3px solid #f1f1f1;
+	width:650px;
+	margin:0;
+	margin-bottom: 0.25em;
+	
+	
+}
+
+
+.photo_des   /*des for display*/
+{
+    color: #808080;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+
+.height_des	/*des for display*/
+{
+    color: #808080;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+
+.button  	/*button for submit*/
+{
+    background-color: #0088cc;
+    border: 1px solid #0088cc;
+    border-radius: 1px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 0.9375em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-right: 0.3125em;
+    margin-bottom: 0.3125em;
+    padding: 0.5em 0.6875em;
+    width: auto;
+
+}

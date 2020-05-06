@@ -1,0 +1,50 @@
+#payment
+{	//float:right;
+	background: RGBA(7,40,195,0.1);
+	width:500px;
+	margin:0 auto;
+	//margin-right: 18em;
+	text-align:center;
+	margin-top: 110px;
+}
+
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+.paybutton
+{
+	background:#ffffff;;
+	padding:14px;
+	font-family:"Ubuntu";
+	font-size:19px;
+	cursor:pointer;
+	
+}
